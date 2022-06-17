@@ -44,12 +44,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .page-header {
     border-bottom: 1px solid #ECECEC;
+  
 }
-
+.page-header > .current {
+    border-bottom: 0px;
+}
 .header-list {
     display: flex;
     align-items: center;
     margin-left: 0px;
+  
 }
 .header-container {
     display: flex;
@@ -66,7 +70,8 @@ h1, h2, h3, h4, h5, h6, p {
     fill: currentColor;
 }
 .header-nav-link {
-    display: flex;
+    display: block;
+    position: relative;
     margin-right: 50px;
 }
 .header-nav-link:last-child {
@@ -92,9 +97,25 @@ h1, h2, h3, h4, h5, h6, p {
     letter-spacing: 0.02em;
     text-align: left;
     color: #212121;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+   
 }
 .sitenav-link.current {
     color: #2196f3;
+}
+.current::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: #2196f3;
+    border-radius: 2px;
 }
 .sitenav-link:focus,
 .sitenav-link:hover {
@@ -130,6 +151,10 @@ h1, h2, h3, h4, h5, h6, p {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link:hover ,
 .header-link:focus {
@@ -180,10 +205,15 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.9;
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-title:hover {
     background-color: #188CE8;
 }
+
                                   /*----benefits----*/
 .benefits {
     margin: 0px 0px;
@@ -260,6 +290,29 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 100%;
     height: auto;
 }
+.work-list-box {
+    position: relative;
+}
+.work-list-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 83px;
+    padding-right: 82px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(47, 48, 58, 0.8);
+    
+}
 .list .item-img:last-child {
     margin-right: 0px;
 }
@@ -325,6 +378,10 @@ h1, h2, h3, h4, h5, h6, p {
     height: 100%;
     border-radius: 50%;
     background-color: #ffffff;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-link:hover, 
 .team-soc-link:focus {
@@ -338,7 +395,11 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     align-items: center;
     justify-content: center;
-    fill: #AFB1B8; 
+    fill: #AFB1B8;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-text {
@@ -395,6 +456,10 @@ h1, h2, h3, h4, h5, h6, p {
      color: #AFB1B8;
      border: 1px solid #AFB1B8;
      border-radius: 4px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
  }
  .clients-item:last-child {
      margin-right: 0px;
@@ -430,6 +495,12 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #ffffff;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 .logo-footer:focus {
     margin-top: 60px;
@@ -455,6 +526,10 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: #757575;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-footer:focus,
 .contacts-footer:hover {
@@ -504,6 +579,10 @@ h1, h2, h3, h4, h5, h6, p {
     height: 100%;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover ,
 .footer-soc-link:focus {
@@ -548,6 +627,10 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.9;
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    transition-property: background-color box-shadow color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-title2:hover,
 .button-title2:focus {
@@ -575,12 +658,82 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .portfolio-item {
     margin: 15px;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.blue-card {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-item:hover .blue-card-text {
+    transform: translateY(0);
+}
+.blue-card-text {
+    position: absolute;
+    top: 0;
+    padding: 63px 24px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background-color: rgba(33, 150, 243, 0.9);
+}
+.
+                                            /*----------modal-----------*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
 
 }
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.btn-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    
+
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+
+}
